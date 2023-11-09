@@ -10,31 +10,36 @@ class Splass extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              image: NetworkImage(
-                  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png'),
-              width: 100,
-              height: 100,
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 360, 0, 0),
-              child: Text(
-                'FROM',
-                style: GoogleFonts.adventPro(fontSize: 15, color: Colors.grey),
+            Padding(
+              padding: const EdgeInsets.only(top: 200.0),
+              child: Image(
+                image:NetworkImage('https://www.pngall.com/wp-content/uploads/13/Whatsapp-Logo.png'),
+                width: 100,
+                height: 100,
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.call),
-                Text(
-                  'Meta',
-                  style: GoogleFonts.italiana(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green),
-                ),
-              ],
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 250, 0,0 ),
+              child: Text(
+                'FROM',
+                style: GoogleFonts.robotoCondensed(fontSize: 15, color: Colors.black),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.call,color: Colors.green,),
+                  Text(
+                    ' Meta',
+                    style: GoogleFonts.italiana(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green),
+                  ),
+                ],
+              ),
             )
           ],
         ),

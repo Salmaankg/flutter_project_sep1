@@ -1,32 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
-class Splashh extends StatelessWidget{
+class Splashh extends StatefulWidget {
+  const Splashh({super.key});
+
+  @override
+  State<Splashh> createState() => _SplashhState();
+}
+
+class _SplashhState extends State<Splashh> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.white,
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/images/aizin.JPG'))
+      backgroundColor: Colors.white,
+      body:Container(
+        decoration:const BoxDecoration(
+        //   image: DecorationImage(
+        //       fit: BoxFit.cover,
+        //       image: AssetImage('assets/images/sport.JPG'))
+       gradient: LinearGradient(colors: [
+         Colors.white,
+         Colors.black12,
+         Colors.black54,
+         Colors.black
+       ])
         ),
-        child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(image: AssetImage('assets/images/sport.JPG'),width: 70,height: 70,alignment: Alignment(100, 100),),
-            Text('HALAND',style: GoogleFonts.italiana(
-              fontSize: 50,fontWeight: FontWeight.bold,color: Colors.lightBlue,
-            ),)
-          ],
-        ),
-      ),)
+        child:Center(
+          child: Column(
+
+          ),
+        ) ,
+
+
+      ),
     );
   }
-  
 }
 void main(){
-  runApp(MaterialApp(home: Splashh(),));
+  'flutter upgrade';
 }
